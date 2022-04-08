@@ -1,3 +1,4 @@
+#! env/bin/python3.8
 from os import stat
 from turtle import pos
 import numpy as np 

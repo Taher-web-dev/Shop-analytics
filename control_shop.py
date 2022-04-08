@@ -39,7 +39,6 @@ def customer_informations() :
         else:
           right_data_base = data_base.loc[ext_ind,:]
         names = right_data_base.loc[:,'name'].values.tolist()
-        print(names)
         name = names[0]
         nb_visite = len(right_data_base)
         nb_purchasing = right_data_base.loc[:,'make_purchase'].sum()
@@ -57,8 +56,6 @@ def customer_informations() :
         cv.putText(frame,text,(p1+5,q1+80),cv.FONT_HERSHEY_COMPLEX,0.3,(255,255,255),1)
         cor1 = n1 + int((n2-n1)/4)
         cor2 = m1 + int((m2 - m1)/2)
-        print(cor1)
-        print(cor2)
         cv.putText(frame,str(name),(cor1, cor2),cv.FONT_HERSHEY_COMPLEX,1,(0,0,255),1)
       else: 
         text = 'New visitor'
